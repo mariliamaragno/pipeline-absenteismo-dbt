@@ -1,0 +1,20 @@
+# Ambiente virtual Python
+venv/
+
+# Arquivos de credenciais do dbt
+absenteismo_dbt/profiles.yml
+~/.dbt/profiles.yml
+
+# Artefatos gerados pelo dbt (recriados a cada rodada)
+absenteismo_dbt/target/
+absenteismo_dbt/dbt_packages/
+absenteismo_dbt/logs/
+
+# Dataset bruto baixado (grande, e recriável via script)
+absenteeism.zip
+absenteeism_data/
+
+# Arquivos do sistema
+.DS_Store
+__pycache__/
+*.pyc

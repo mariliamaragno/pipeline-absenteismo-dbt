@@ -1,0 +1,30 @@
+reason_code,reason_description,reason_category
+0,Sem motivo informado,Não classificado
+1,Doenças infecciosas e parasitárias,Saúde - Doença
+2,Neoplasias,Saúde - Doença
+3,Doenças do sangue e órgãos hematopoéticos,Saúde - Doença
+4,Doenças endócrinas nutricionais e metabólicas,Saúde - Doença
+5,Transtornos mentais e comportamentais,Saúde - Doença
+6,Doenças do sistema nervoso,Saúde - Doença
+7,Doenças do olho e anexos,Saúde - Doença
+8,Doenças do ouvido e apófise mastoide,Saúde - Doença
+9,Doenças do aparelho circulatório,Saúde - Doença
+10,Doenças do aparelho respiratório,Saúde - Doença
+11,Doenças do aparelho digestivo,Saúde - Doença
+12,Doenças da pele e tecido subcutâneo,Saúde - Doença
+13,Doenças do sistema osteomuscular,Saúde - Doença
+14,Doenças do aparelho geniturinário,Saúde - Doença
+15,Gravidez parto e puerpério,Saúde - Doença
+16,Afecções originadas no período perinatal,Saúde - Doença
+17,Malformações congênitas e anomalias cromossômicas,Saúde - Doença
+18,Sintomas e achados clínicos anormais não classificados,Saúde - Doença
+19,Lesões envenenamentos e outras causas externas,Saúde - Doença
+20,Causas externas de morbidade e mortalidade,Saúde - Doença
+21,Fatores que influenciam o estado de saúde,Saúde - Preventivo
+22,Acompanhamento do paciente,Administrativo
+23,Consulta médica,Administrativo
+24,Doação de sangue,Administrativo
+25,Exame laboratorial,Administrativo
+26,Falta injustificada,Injustificado
+27,Fisioterapia,Administrativo
+28,Consulta odontológica,Administrativo
