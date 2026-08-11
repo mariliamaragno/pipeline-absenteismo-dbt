@@ -19,3 +19,6 @@ absenteeism_data/
 __pycache__/
 *.pyc
 logs/
+absenteismo_dbt/profiles_docker/
+airflow/logs/
+airflow/.env
