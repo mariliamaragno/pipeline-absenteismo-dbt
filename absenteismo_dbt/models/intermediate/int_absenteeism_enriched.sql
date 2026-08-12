@@ -12,6 +12,7 @@ joined as (
         a.reason_code,
         r.reason_description,
         r.reason_category,
+        r.reason_type,
         a.absence_month,
         a.day_of_week_code,
         case a.day_of_week_code
