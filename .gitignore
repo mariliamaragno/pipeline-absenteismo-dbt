@@ -22,3 +22,12 @@ logs/
 absenteismo_dbt/profiles_docker/
 airflow/logs/
 airflow/.env
+
+# Script com credenciais Snowflake em texto puro
+load_raw_snowflake.py
+
+# Artefatos do projeto dbt Snowflake
+absenteismo_dbt_snowflake/target/
+absenteismo_dbt_snowflake/dbt_packages/
+absenteismo_dbt_snowflake/logs/
+absenteismo_dbt_snowflake/profiles_docker/

@@ -92,6 +92,21 @@ Controlando simultaneamente por idade, distância, meta atingida, gasto com tran
 - A amostra do grupo concentrado (9 pessoas) é pequena — achados categóricos como "100% no menor nível de escolaridade" devem ser lidos como indício, não como padrão populacional robusto
 - Correlações e regressão capturam relações lineares; efeitos não-lineares (ex: risco que só aparece acima de certa idade) podem estar subestimados
 
+## Extensão: portabilidade para Snowflake
+
+Como exercício de portabilidade de stack — competência citada com frequência em vagas de Analytics Engineer — portei o pipeline de transformação (staging → intermediate → marts) para o Snowflake, usando o adapter `dbt-snowflake`, mantendo o projeto original em Postgres intacto.
+
+**O que mudou entre os dois ambientes:**
+- Carga do dado bruto: `snowflake-connector-python` (função `write_pandas`) em vez de `sqlalchemy`
+- Nomenclatura de colunas: normalizada para maiúsculas sem espaços na carga, eliminando a necessidade de aspas duplas nos identificadores do SQL (diferença comum entre convenções dos dois bancos)
+- Autenticação: usuário e senha, em vez de string de conexão direta
+
+**O que permaneceu idêntico:**
+- A lógica de negócio dos models (staging, intermediate, marts) — mesma estrutura em camadas, mesmas transformações
+- Os 7 testes de qualidade de dados, todos passando igualmente no Snowflake
+
+Essa extensão reforça um princípio central de engenharia analítica: a lógica de modelagem deve ser portável entre warehouses — o que muda é a camada de conexão/carga, não a lógica de transformação em si.
+
 ## Como rodar localmente
 
 \`\`\`bash
@@ -124,7 +139,8 @@ dbt test
 - [x] Testes de qualidade de dados
 - [x] Orquestração via Airflow
 - [x] Análise exploratória em Python (Pareto, correlação, regressão, perfil demográfico)
-- [ ] Documentação gerada via \`dbt docs\`
+- [x] Extensao de portabilidade: pipeline replicado no Snowflake (dbt-snowflake)
+- [x] Documentação gerada via `dbt docs`
 
 ---
 
